@@ -14,3 +14,13 @@ route HelloRoute { path: "/hello/:name", to: HelloPage }
 page HelloPage {
   component: import { HelloPage } from "@src/pages/Hello"
 }
+
+entity User {=psl
+    id          String     @id 
+    name String
+psl=}
+
+query getUsers {
+  fn: import { getUsers } from "@src/queries",
+  entities: [User]
+}
