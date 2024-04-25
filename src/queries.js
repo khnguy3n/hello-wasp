@@ -3,3 +3,8 @@ export const getUsers = async (args, context) => {
     orderBy: { id: 'asc' },
   })
 }
+export const getBoxes = async (args, context) => {
+  return context.entities.Box.findMany({
+    orderBy: { id: 'asc' },
+  })
+}

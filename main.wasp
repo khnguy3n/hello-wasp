@@ -32,3 +32,8 @@ query getUsers {
   fn: import { getUsers } from "@src/queries",
   entities: [User]
 }
+
+query getBoxes {
+  fn: import { getBoxes } from "@src/queries",
+  entities: [Box]
+}
