@@ -1,8 +1,8 @@
-app hiwasp {
+app hellowasp {
   wasp: {
     version: "^0.13.2"
   },
-  title: "hiwasp"
+  title: "hellowasp"
 }
 
 route RootRoute { path: "/", to: MainPage }
@@ -12,5 +12,5 @@ page MainPage {
 
 route HelloRoute { path: "/hello/:name", to: HelloPage }
 page HelloPage {
-  component: import { HelloPage } from "@src/pages/hello"
+  component: import { HelloPage } from "@src/pages/Hello"
 }
