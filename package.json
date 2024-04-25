@@ -1,5 +1,5 @@
 {
-  "name": "hiwasp",
+  "name": "hellowasp",
   "dependencies": {
     "wasp": "file:.wasp/out/sdk/wasp",
     "react": "^18.2.0"
