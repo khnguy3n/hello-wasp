@@ -18,6 +18,14 @@ page HelloPage {
 entity User {=psl
     id          String     @id 
     name String
+    boxes   Box[]
+psl=}
+
+entity Box {=psl
+    id          String     @id 
+    name String
+    user User @relation(fields: [userId], references: [id])
+    userId String
 psl=}
 
 query getUsers {
