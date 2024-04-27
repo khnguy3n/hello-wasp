@@ -46,3 +46,8 @@ query getBoxes {
   fn: import { getBoxes } from "@src/queries",
   entities: [Box]
 }
+
+query getItemsByBox {
+  fn: import { getItemsByBox } from "@src/queries",
+  entities: [Item]
+}
