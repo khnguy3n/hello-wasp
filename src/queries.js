@@ -10,6 +10,20 @@ export const getBoxes = async (args, context) => {
 		orderBy: { id: "asc" },
 	});
 };
+export const getBoxById = async (id, context) => {
+	console.log("getMe box", id);
+	try {
+		const box = await context.entities.Box.findFirst({
+			where: {
+				id,
+			},
+		});
+    console.log("box is", box.name)
+		return box;
+	} catch (error) {
+		throw new HttpError(404);
+	}
+};
 export const getItemsByBox = async (boxId, context) => {
 	if (!context.entities.Item) {
 		throw new HttpError(401);
@@ -21,7 +35,7 @@ export const getItemsByBox = async (boxId, context) => {
 			},
 			orderBy: { id: "asc" },
 		});
-    return items;
+		return items;
 	} catch (error) {
 		throw new HttpError(404);
 	}

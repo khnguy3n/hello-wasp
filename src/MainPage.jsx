@@ -42,7 +42,7 @@ const BoxesList = ({ boxes }) => {
   return (
     <div>
       {boxes.map((box, idx) => (
-        <h1> {box.name} {box.userId} </h1>
+        <a key={box.id} href={`/hello/${box.id}`}>{box.name}</a>
       ))}
     </div>
   )
