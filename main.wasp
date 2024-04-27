@@ -31,7 +31,8 @@ psl=}
 
 entity Item {=psl
     id    Int @id @default(autoincrement()) 
-    name String
+    name String @default("")
+    src String @default("")
     box Box @relation(fields: [boxId], references: [id])
     boxId String
 psl=}
