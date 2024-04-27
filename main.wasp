@@ -26,6 +26,14 @@ entity Box {=psl
     name String
     user User @relation(fields: [userId], references: [id])
     userId String
+    items   Item[]
+psl=}
+
+entity Item {=psl
+    id    Int @id @default(autoincrement()) 
+    name String
+    box Box @relation(fields: [boxId], references: [id])
+    boxId String
 psl=}
 
 query getUsers {
