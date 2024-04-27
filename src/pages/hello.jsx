@@ -1,6 +1,6 @@
 import { getItemsByBox, useQuery } from 'wasp/client/operations'
 export const HelloPage = (props) => {
-  const { data: items } = useQuery(getItemsByBox);
+  const { data: items } = useQuery(getItemsByBox, "1yh4KS9pnirLgpKOl8Z6B");
 
   return (
     <div>
